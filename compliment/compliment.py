@@ -146,7 +146,7 @@ class Compliment(commands.Cog):
         return
 
     @commands.command()
-    async def compliment(self, ctx: commands.Context, user: discord.Member = None) -> None:
+    async def iltifat(self, ctx: commands.Context, user: discord.Member = None) -> None:
         """
         Compliment the user
 
