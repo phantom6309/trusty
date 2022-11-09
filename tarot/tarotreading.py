@@ -105,14 +105,14 @@ class TarotReading(commands.Cog):
         await ctx.send(embed=embed)
 
     @tarot.command(name="reading")
-    async def _reading(self, ctx: commands.Context, user: Optional[discord.Member] = None) -> None:
+    async def _fal(self, ctx: commands.Context, user: Optional[discord.Member] = None) -> None:
         """
         Unique reading as of this very moment.
 
         `[user]` Optional user you want to view a tarot reading for.
         If no user is provided this will run for the user who is running the command.
         """
-        card_meaning = ["Past", "Present", "Future", "Potential", "Reason"]
+        card_meaning = ["Geçmiş", "Şimdi", "Gelecek", "Potansiyel", "Sebep"]
         if user is None:
             user = ctx.message.author
 
@@ -135,8 +135,8 @@ class TarotReading(commands.Cog):
             number += 1
         await ctx.send(embed=embed)
 
-    @tarot.command(name="card")
-    async def _card(
+    @tarot.command(name="kart")
+    async def _kart(
         self, ctx: commands.Context, *, tarot_card: Optional[TarotConverter] = None
     ) -> None:
         """
@@ -149,15 +149,15 @@ class TarotReading(commands.Cog):
         # msg = message.content
         card = None
 
-        if tarot_card is None:
-            card = TAROT_CARDS[str(random.randint(1, 78))]
+        if tarot_kart is None:
+            kart = TAROT_CARDS[str(random.randint(1, 78))]
 
         else:
-            card = tarot_card
+            kart = tarot_card
 
         embed = discord.Embed(
-            title=card.card_name,
-            description=card.card_meaning,
+            title=kart.card_name,
+            description=kart.card_meaning,
             colour=discord.Colour(value=self.get_colour()),
             url=card.card_url,
         )
