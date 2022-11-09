@@ -159,7 +159,7 @@ class TarotReading(commands.Cog):
             title=kart.card_name,
             description=kart.card_meaning,
             colour=discord.Colour(value=self.get_colour()),
-            url=card.card_url,
+            url=kart.card_url,
         )
         embed.timestamp = ctx.message.created_at
         embed.set_author(name=user.name, icon_url=user.avatar_url)
