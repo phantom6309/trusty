@@ -89,7 +89,7 @@ class TarotReading(commands.Cog):
         cards = sample((range(1, 78)), 5)
 
         embed = discord.Embed(
-            title="Tarot reading for {}".format(user.display_name),
+            title=.format(user.display_name) "için Tarot falı",
             colour=discord.Colour(value=self.get_colour()),
         )
         embed.set_thumbnail(url=TAROT_CARDS[str(cards[-1])].card_img)
