@@ -104,7 +104,7 @@ class TarotReading(commands.Cog):
             number += 1
         await ctx.send(embed=embed)
 
-    @tarot.command(name="reading")
+    @tarot.command(name="fal")
     async def _fal(self, ctx: commands.Context, user: Optional[discord.Member] = None) -> None:
         """
         Unique reading as of this very moment.
@@ -137,7 +137,7 @@ class TarotReading(commands.Cog):
 
     @tarot.command(name="kart")
     async def _kart(
-        self, ctx: commands.Context, *, tarot_card: Optional[TarotConverter] = None
+        self, ctx: commands.Context, *, tarot_kart: Optional[TarotConverter] = None
     ) -> None:
         """
         Random card or choose a card based on number or name.
